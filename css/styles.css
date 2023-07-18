@@ -1,34 +1,43 @@
+/* Reset styles */
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
   margin: 0;
   padding: 0;
 }
 
+/* Typography */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Layout */
 .trip-list {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  flex: 1;
-  font-size: 30px;
 }
 
-section {
+.slide {
   margin: 2rem 0;
-  text-align: center;
   display: flex;
+  align-items: center;
 }
 
-section .trip-list {
+.slide .trip-list {
   flex-basis: 20%;
   border-right: 1px solid #ccc;
   padding-right: 1rem;
+  margin-right: 1rem;
 }
 
-section img {
-  max-width: 100%;
+.slide img {
+  max-width: 80%;
   height: auto;
-  flex: 1;
+}
+
+.slide + .slide {
+  margin-top: 2rem; /* Add spacing between the slides */
+  margin-left: 20%; /* Adjust the value as per your preference */
 }
 
 #play-audio-btn {
@@ -54,6 +63,7 @@ a[href="javascript:history.back()"] {
   border-radius: 4px;
 }
 
+/* Header and Footer */
 header,
 footer {
   background-color: #0d98e8;
