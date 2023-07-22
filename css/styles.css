@@ -10,60 +10,56 @@ body {
   line-height: 1.6;
 }
 
-/* Layout */
-.trip-list {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+/* Layout for larger screens (e.g., tablets and desktops) */
+@media only screen and (min-width: 768px) {
+  .slide {
+    display: flex;
+    align-items: center;
+  }
+
+  .slide .trip-list {
+    flex-basis: 20%;
+    border-right: 1px solid #ccc;
+    padding-right: 1rem;
+    margin-right: 1rem;
+  }
+
+  .slide img {
+    max-width: 80%; /* Adjust the value as per your preference */
+    height: auto;
+  }
+
+  .slide + .slide {
+    margin-top: 2rem; /* Add spacing between the slides */
+    margin-left: 20%; /* Adjust the value as per your preference */
+  }
 }
 
-.slide {
-  margin: 2rem 0;
-  display: flex;
-  align-items: center;
+/* Layout for smaller screens (e.g., mobile devices) */
+@media only screen and (max-width: 767px) {
+  .slide {
+    flex-direction: column;
+  }
+
+  .slide .trip-list {
+    flex-basis: 100%; /* Take up full width on mobile */
+    border: none; /* Remove border on mobile */
+    padding: 0; /* Remove padding on mobile */
+    margin: 1rem 0; /* Add some vertical spacing on mobile */
+  }
+
+  .slide img {
+    max-width: 100%; /* Take up full width on mobile */
+    height: auto;
+  }
+
+  .slide + .slide {
+    margin-top: 2rem; /* Add spacing between the slides on mobile */
+    margin-left: 0; /* Reset margin on mobile */
+  }
 }
 
-.slide .trip-list {
-  flex-basis: 20%;
-  border-right: 1px solid #ccc;
-  padding-right: 1rem;
-  margin-right: 1rem;
-}
-
-.slide img {
-  max-width: 80%;
-  height: auto;
-}
-
-.slide + .slide {
-  margin-top: 2rem; /* Add spacing between the slides */
-  margin-left: 20%; /* Adjust the value as per your preference */
-}
-
-#play-audio-btn {
-  display: block;
-  margin: 1rem auto;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: #128ada;
-  border: none;
-  outline: none;
-  cursor: pointer;
-}
-
-a[href="javascript:history.back()"] {
-  display: inline-block;
-  margin: 1rem;
-  padding: 0.5rem 1rem;
-  background-color: #f4f4f4;
-  border: 1px solid #ccc;
-  text-decoration: none;
-  color: #333;
-  border-radius: 4px;
-}
-
-/* Header and Footer */
+/* Header and Footer styles (apply to both larger and smaller screens) */
 header,
 footer {
   background-color: #0d98e8;
