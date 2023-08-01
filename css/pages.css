@@ -9,14 +9,14 @@ body {
 
 header {
   background-color: #0d98e8;
-  padding: 4rem;
+  padding: 2rem;
   text-align: center;
 }
 
 header h1 {
   color: #fff;
   margin: 0;
-  font-size: 6rem;
+  font-size: 4rem;
 }
 
 main {
