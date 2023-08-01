@@ -1,38 +1,57 @@
 body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
   margin: 0;
-  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #0d98e8;
+  padding: 2rem;
+  text-align: center;
+}
+
+header h1 {
+  color: #fff;
+  margin: 0;
+  font-size: 4rem;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+section {
   display: flex;
   justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  margin: 2rem 0;
+}
+
+section img {
+  max-width: 80%;
+  height: auto;
+}
+
+.box {
+  text-align: center;
+  padding: 2rem;
+  margin: 60rem;
+  border: 10px solid #000;
+  border-radius: 10px;
+}
+
+.box h2 {
+  margin: 0;
+  font-size: 4rem;
   background-color: #fff;
-}
-
-body {
-  line-height: 1.6;
-}
-
-/* Layout */
-.container {
-  display: grid;
-  width: 100%; /* Change this to 100% */
-  max-width: 750px; /* Add max-width to limit the container on larger screens */
-  height: 100vh; /* Optionally, set the container height to fill the viewport vertically */
-  grid-template-columns: 200px 1fr 1fr;
-  grid-template-rows: 80px 1fr 1fr 100px;
-  grid-gap: 0.5rem;
-  grid-template-areas:
-    "header header header"
-    "sidebar content-1 content-1"
-    "sidebar content-2 content-2"
-    "footer footer footer";
-}
-
-.header {
-  grid-area: header;
-  background-color: #1EAAFC;
-  background-image: linear-gradient(160deg, #1EAAFC 0%, #1EAAFC 127%);
+  position: relative;
+  top: -0.8rem;
+  display: inline-block;
+  padding: 0 10px;
 }
 
 .trip-list {
@@ -42,89 +61,20 @@ body {
 }
 
 .trip-list li {
-  margin-bottom: 10px;
+  margin: 10px;
 }
 
 .trip-list li a {
-  color: #030303;
+  display: block;
   text-decoration: none;
+  color: #000;
+  font-size: 4rem;
 }
 
-.trip-list li a:hover {
-  text-decoration: underline;
-}
-
-.sidebar {
-  grid-area: sidebar;
-  background-image: linear-gradient(203deg, #fff 0%, #fff 90%);
-}
-
-.content-1 {
-  grid-area: content-1;
-  background-image: linear-gradient(130deg, #6C52D9 0%, #1EAAFC 85%, #3EDFD7 100%);
-}
-
-.content-2 {
-  grid-area: content-2;
-  background-image: linear-gradient(130deg, #6C52D9 0%, #1EAAFC 85%, #3EDFD7 100%);
-}
-
-.footer {
-  grid-area: footer;
-  background-color: #1EAAFC;
-  background-image: linear-gradient(160deg, #1EAAFC 0%, #1EAAFC 127%);
-}
-
-/* Slide styles */
-.slide {
-  display: flex;
-  align-items: center;
-}
-
-.slide .trip-list {
-  flex-basis: 100%;
-  border-right: 1px solid #ccc;
-  padding-right: 1rem;
-  margin-right: 1rem;
-}
-
-.slide img {
-  max-width: 80%;
-  height: auto;
-}
-
-.slide + .slide {
-  margin-top: 2rem; /* Add spacing between the slides */
-}
-
-/* Responsive layout for smaller screens (e.g., mobile devices) */
-@media only screen and (max-width: 767px) {
-  .container {
-    width: 100%;
-    height: auto;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    grid-template-areas:
-      "header"
-      "sidebar"
-      "content-1"
-      "content-2"
-      "footer";
-  }
-
-  .slide {
-    flex-direction: column;
-  }
-
-  .slide .trip-list {
-    flex-basis: 100%;
-    border: none;
-    padding: 0;
-    margin: 1rem 0;
-  }
-
-  .slide img {
-    max-width: 100%;
-    height: auto;
-  }
+footer {
+  background-color: #0d98e8;
+  padding: 1rem;
+  text-align: center;
+  color: #fff;
+  font-size: 1.5rem;
 }
