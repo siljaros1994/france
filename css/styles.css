@@ -16,11 +16,12 @@ body {
 /* Layout */
 .container {
   display: grid;
-  width: 750px;
-  height: 600px;
+  width: 100%; /* Change this to 100% */
+  max-width: 750px; /* Add max-width to limit the container on larger screens */
+  height: 100vh; /* Optionally, set the container height to fill the viewport vertically */
   grid-template-columns: 200px 1fr 1fr;
   grid-template-rows: 80px 1fr 1fr 100px;
-  grid-gap: 1rem;
+  grid-gap: 0.5rem;
   grid-template-areas:
     "header header header"
     "sidebar content-1 content-1"
@@ -88,7 +89,7 @@ body {
 }
 
 .slide img {
-  max-width: 80%; /* Adjust the value as per your preference */
+  max-width: 80%;
   height: auto;
 }
 
