@@ -105,6 +105,11 @@ footer {
   .trip-list li a {
     font-size: 1.5rem;
   }
+
+  .box h2,
+  .events-list li a {
+    font-size: 1.5rem;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -114,6 +119,11 @@ footer {
 
   .box h2,
   .trip-list li a {
+    font-size: 1.2rem;
+  }
+
+  .box h2,
+  .events-list li a {
     font-size: 1.2rem;
   }
 }
