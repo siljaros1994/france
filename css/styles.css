@@ -96,6 +96,104 @@ footer {
   font-size: 1.5rem;
 }
 
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #0d98e8;
+  padding: 4rem;
+  text-align: center;
+}
+
+header h1 {
+  color: #fff;
+  margin: 0;
+  font-size: 4rem;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+section img {
+  max-width: 80%;
+  height: auto;
+}
+
+.box {
+  text-align: center;
+  padding: 2rem;
+  margin: 2rem;
+  border: 10px solid #0d98e8;
+  border-radius: 10px;
+}
+
+.box h2 {
+  margin: 0;
+  font-size: 4rem;
+  background-color: #fff;
+  position: relative;
+  top: -0.8rem;
+  display: inline-block;
+  padding: 0 10px;
+}
+
+.trip-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.trip-list li {
+  margin: 10px;
+}
+
+.trip-list li a {
+  display: block;
+  text-decoration: none;
+  color: #000;
+  font-size: 3rem;
+}
+
+.events-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.events-list li {
+  margin: 10px;
+}
+
+.events-list li a {
+  display: block;
+  text-decoration: none;
+  color: #000;
+  font-size: 3rem;
+}
+
+footer {
+  background-color: #0d98e8;
+  padding: 1rem;
+  text-align: center;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
 @media screen and (max-width: 768px) {
   header h1 {
     font-size: 3rem;
@@ -106,10 +204,6 @@ footer {
     font-size: 1.5rem;
   }
 
-  .box h2,
-  .events-list li a {
-    font-size: 1.5rem;
-  }
 }
 
 @media screen and (max-width: 480px) {
@@ -122,8 +216,4 @@ footer {
     font-size: 1.2rem;
   }
 
-  .box h2,
-  .events-list li a {
-    font-size: 1.2rem;
-  }
 }
