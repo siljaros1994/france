@@ -134,6 +134,12 @@ section img {
   height: auto;
 }
 
+.map-image {
+  max-width: 75%;
+  width: 65%;
+  height: auto;
+}
+
 .box {
   text-align: center;
   padding: 2rem;
